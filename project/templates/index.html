@@ -6,11 +6,11 @@
 </head>
 <body>
 
-	<ol>
-		{% for i in list %}
-		<li><a href="{% url 'post_list' %}">{{i.title}}</a></li>
-		{%endfor%}
-	</ol>
+<header>
+	<h1>Home page</h1>
+</header>
+
+<a href="post_list/">go to post list</a>
 
 </body>
 </html>
