@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>the page</title>
+	<title>main page</title>
 </head>
 <body>
-<ul>
-{% for i in post %}
-    <li>Title: {{ i.title }}</li>
-    <li>Blog: {{ i.text }}</li>
-    <p></p>
-{% endfor %}
-</ul>
+
+	<ol>
+		{% for i in list %}
+		<li><a href="{% url 'post_list' %}">{{i.title}}</a></li>
+		{%endfor%}
+	</ol>
+
 </body>
 </html>
