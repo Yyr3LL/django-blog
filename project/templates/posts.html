@@ -3,28 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>the page</title>
+    <style type="text/css">
+
+    	body {
+    		background-color: #ccffff;
+    	}	
+    	ol {
+    		list-style: none;
+    	}
+    	ul {
+    		list-style: none;
+    	}
+    	.post_el {
+    		background-color: #80aaff; 
+    		border-top-left-radius: 5px; 
+    		border-top-right-radius: 5px;
+			border-bottom-left-radius: 5px; 
+			border-bottom-right-radius: 5px;
+    	}
+ 
+    </style>
+
 </head>
+
 <body>
 
-<header>
-	<h1>Post list page</h1>
-</header>
+	<header>
+		<h1>Post list page</h1>
+	</header>
 
-<div>
-	<a href="/">Home page</a>
-</div>
+	<div>
+		<a href="/"><h3>Home page</h3></a>
+		<a href="admin/"><h3>Admin</h3></a>
+	</div>
 
-<ol>
-	{% for i in post %}
-		<li>
-			<ul>
-				<li>Title: {{ i.title }}</li>
-				<li>Blog: {{ i.text }}</li>
-				<p></p>
-			</ul>
-		</li>
-	{% endfor %}
-</ol>
+	<ol>
+		{% for i in post %}
+			<li class = "post_el">
+				<ul> 
+					<li>
+						<div class="container">
+							<h2>{{ i.title }}</h2>
+						</div>
+					</li>
+
+					<li>
+						<div class="container">
+							{{ i.text }}
+						</div>
+					</li>
+					<p></p>
+				</ul>
+			</li>
+		{% endfor %}
+	</ol>
 
 </body>
 </html>
