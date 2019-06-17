@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>the page</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <style type="text/css">
 
     	header {
@@ -14,6 +16,7 @@
     	}
     	body {
     		background-color: #ccffff;
+		    font-family: 'Source Code Pro', monospace;
     	}	
     	ol {
     		list-style: none;
@@ -28,7 +31,14 @@
 			border-bottom-left-radius: 5px; 
 			border-bottom-right-radius: 5px;
     	}
- 
+    	.post_in {
+		    font-family: 'Open Sans', sans-serif;
+    	}
+ 		a {
+    		text-decoration: none;
+    		color: #003333;
+    	}
+
     </style>
 
 </head>
@@ -53,7 +63,7 @@
 
 					<li>
 						<div class="container">
-							{{ i.text }}
+							<p class="post_in">{{ i.text }}</p>
 						</div>
 					</li>
 					<p></p>
