@@ -5,6 +5,13 @@
     <title>the page</title>
     <style type="text/css">
 
+    	header {
+			margin-left: 80px;
+    		margin-top: 0;
+    		margin-bottom: 0;
+    		margin-right: 0;
+    	
+    	}
     	body {
     		background-color: #ccffff;
     	}	
@@ -30,12 +37,9 @@
 
 	<header>
 		<h1>Post list page</h1>
-	</header>
-
-	<div>
 		<a href="/"><h3>Home page</h3></a>
 		<a href="admin/"><h3>Admin</h3></a>
-	</div>
+	</header>
 
 	<ol>
 		{% for i in post %}
