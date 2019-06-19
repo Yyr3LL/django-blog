@@ -1,12 +1,8 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, HttpResponsePermanentRedirect
-
 from django.utils import timezone
-
-
 from .forms import CreatePostForm
 from .models import Post
-import random
 
 
 def make_post(request):
@@ -17,7 +13,7 @@ def make_post(request):
             return HttpResponseRedirect("/post_list/")
         else:
             form = CreatePostForm()
-    return render(request, 'home.html', {'form': form})
+    return render(request, 'create_post.html', {'form': form})
 
 
 def main_page(request):
