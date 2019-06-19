@@ -3,8 +3,9 @@ from . import views
 
 urlpatterns = [
 
-	url(r'^post_list/', views.post_list),
-	url(r'^$', views.main_page),
-# 7aea2a59a5c4b44f846eaae00e9ab60cfc7f07d6
+	url(r'^post_list/', views.post_list, name="post_list"),
+	url(r'^$', views.main_page, name="main_page"),
+	url(r'^home/$', views.home, name="home"),
+
 ]
 
