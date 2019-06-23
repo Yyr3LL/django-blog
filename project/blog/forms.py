@@ -5,12 +5,13 @@ from .models import Post
 
 
 class CreatePostForm(forms.ModelForm):
-    text = forms.CharField()
+    # author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = forms.CharField()
+    text = forms.CharField()
 
     class Meta:
         model = Post
-        fields = ('text', 'title')
+        fields = ('title', 'text')
 
 
 

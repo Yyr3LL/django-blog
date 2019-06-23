@@ -1,0 +1,22 @@
+header {
+			margin-left: 80px;
+    		margin-top: 0;
+    		margin-button: 0;
+    		margin-right: 80;
+    	}
+    	body {
+    		margin-left: 15%;
+    		margin-right: 30%;
+    		background-color: #ccffff;
+		    font-family: 'Source Code Pro', monospace;
+    	}	
+    	ol {
+    		list-style: none;
+    	}
+    	ul {
+    		list-style: none;
+    	}
+    	a {
+    		text-decoration: none;
+    		color: #003333;
+    	}
