@@ -3,34 +3,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'css/posts.css' %}">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+   <!--  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
     <title>the page</title>
 	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="common_body">
 
-	<header>
+	<header class="common_header">
 		<h1>Post list page</h1>
-		<a href="/"><h2>Home page</h2></a>
-		<a href="/make_post/"><h2>Make a post</h2></a>
+		<a href="/" class="head_link"><h2>Home page</h2></a>
+		<a href="/make_post/" class="head_link"><h2>Make a post</h2></a>
 	</header>
 
-	<ol>
+	<ol class="posts_list">
 		{% for i in post %}
 			<li class = "post_el">
 				<ul> 
 					<li>
-						<div class="container">
+						<div>
 							<h2 class="post_name">{{ i.title }}</h2>
 						</div>
 					</li>
 
 					<li>
-						<div class="container">
+						<div>
 							<p class="post_in">{{ i.text }}</p>
 						</div>
 					</li>

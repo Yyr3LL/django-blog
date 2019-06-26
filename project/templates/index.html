@@ -3,18 +3,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"><!-- 
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> --> 
 	<title>main page</title>
 	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="common_body">
 
-<header>
+<header class="common_header">
 	<h1>Home page</h1>
-	<a href="post_list/"><h2>Posts page</h2></a>
-	<a href="admin/"><h2>Admin</h2></a>
+	<a href="post_list/" class="link"><h2>Posts page</h2></a>
+	<a href="admin/" class="link"><h2>Admin</h2></a>
 </header>
 
 

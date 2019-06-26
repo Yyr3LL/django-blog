@@ -3,19 +3,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'css/create_post.css' %}">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
     <title>jopa</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
+<body class="common_body">
+    <header class="common_header">
         <h1>Creating post</h1>
-        <a href="/post_list/"><h2><-- Back</h2></a>
+        <a href="/post_list/" class="link"><h2><-- Back</h2></a>
     </header>
 
-    <div>
+    <div class="container">
         <form method="post">
             {{ form.as_p }}
             {% csrf_token %}
