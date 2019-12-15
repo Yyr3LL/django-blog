@@ -13,12 +13,12 @@
 
 	<header class="common_header">
 		<h1>Post list page</h1>
-		<a href="/" class="head_link"><h2>Home page</h2></a>
-		<a href="/make_post/" class="head_link"><h2>Make a post</h2></a>
+		<a href="{% url 'main_page' %}" class="head_link"><h2>Home page</h2></a>
+		<a href="{% url 'make_post' %}" class="head_link"><h2>Make a post</h2></a>
 	</header>
 
 	<ol class="posts_list">
-		{% for i in post %}
+		{% for i in posts %}
 			<li class = "post_el">
 				<ul> 
 					<li>

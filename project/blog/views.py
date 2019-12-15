@@ -1,26 +1,26 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, HttpResponsePermanentRedirect
 from django.utils import timezone
+from django.views.generic import FormView, ListView, TemplateView
+
 from .forms import CreatePostForm
 from .models import Post
 
 
-def make_post(request):
-    form = CreatePostForm(request.POST)
-    if request.method == "POST":
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect("/post_list/")
-        else:
-            form = CreatePostForm()
-    return render(request, 'create_post.html', {'form': form})
+class MakePostView(FormView):
+    template_name = "create_post.html"
+    form_class = CreatePostForm
+    success_url = "/"
+
+    def form_valid(self, form):
+        form.save()
+        return HttpResponseRedirect('/post_list/')
 
 
-def main_page(request):
-    posts = Post.objects.filter(created_date__lte=timezone.now()).order_by('created_date')
-    return render(request, 'index.html', {'post': posts})
+class MainPageView(TemplateView):
+    template_name = "index.html"
 
 
-def post_list(request):
-    posts = Post.objects.filter(created_date__lte=timezone.now()).order_by('-created_date')
-    return render(request, 'posts.html', {'post': posts})
+class PostListView(ListView):
+    template_name = "posts.html"
+    queryset = Post.objects.filter(created_date__lte=timezone.now()).order_by('created_date')
+    context_object_name = "posts"
